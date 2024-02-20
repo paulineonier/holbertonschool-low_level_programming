@@ -10,6 +10,8 @@ int main(void)
        	n = rand() - RAND_MAX / 2;
 
        	/* Check if the variable n is positive, zero, or negative */
+	
+	printf("%d is positive", n)
 
        	if (n > 0)
        	{ printf("The number %d is positive.\n", n);
