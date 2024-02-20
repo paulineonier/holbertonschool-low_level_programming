@@ -11,7 +11,7 @@ int main(void)
 
        	/* Check if the variable n is positive, zero, or negative */
 	
-	printf("%d is positive", n)
+	printf("%d is positive", n);
 
        	if (n > 0)
        	{ printf("The number %d is positive.\n", n);
