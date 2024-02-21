@@ -1,8 +1,7 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
-/* 
+/** 
  * Return: Always 0 (success) 
 */
 
@@ -14,7 +13,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	
 	/* Get the last digit of n */
-	inti last_digit = n % 10
+	int last_digit = n % 10
 
 	/* Check if the variable n is positive, zero, or negative */
 	if (n > 0)
