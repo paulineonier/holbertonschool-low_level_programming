@@ -7,17 +7,21 @@
 
 void print_diagonal(int n)
 {
-	if (n > 0) /* verifie si n est positif, si oui code s'ex√cute */
+	if (n > 0) /* v√rifie si valeur n est positive */
 	{
-		int i; /* d√©clare i comme compteu */
+		int i, j;
 
-		for (i = 0; i < n; i++) /* boucle de 0 a n-1 */
+		for (i = 0; i < n; i++)
 		{
+			for (j = 0; j < i; j++) /* cr√©√e ldiagonale,ex√ute de 0 a i-1 */
+			{
+				_putchar(' '); /* imprime un espace */
+			}
 			_putchar('\\');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
-	else /* si n = 0 ou n√gatif affiche \n donc ligne vide */
+	else /* si n = 0 ou n√©gatif affiche \n donc ligne vide */
 		{
 		_putchar('\n');
 		}
