@@ -12,7 +12,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i < 100; i++)
+	for (i = 1; i <= 100; i++)
 
 	if (i % 3 == 0 && i % 5 == 0) /* si multiple 3,5 print FizzBuzz */
 	{
@@ -28,12 +28,12 @@ int main(void)
 	}
 	else
 	{
-		printf("%d", i); /* print valeur entre 0 et 100 si != multiple de 3,5 */
+		printf("%d", i);
 	}
-	if (i < 100) /* si inferieur a 100 print un espace */
+	if (i != 100) /* si inferieur a 100 print un espace */
 	{
 		printf(" ");
 	}
 	printf("\n");
-	return (0); /* retourne 0 une fois fini */
+	return (0);
 }
