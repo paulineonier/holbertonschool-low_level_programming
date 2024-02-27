@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - print 1 to 100,
  * multiples of 3 with Fizz,
  * multiples of 5 with Buzz
  * and multiple of both 3 and 5 with FizzBuzz
- * Return: 0 on success
+ * Return: 0 on (Success)
  */
 
 int main(void)
@@ -13,26 +14,27 @@ int main(void)
 	int i;
 
 	for (i = 1; i <= 100; i++)
-
-	if (i % 3 == 0 && i % 5 == 0) /* si multiple 3,5 print FizzBuzz */
 	{
-		printf("FizzBuzz");
-	}
-	else if (i % 3 == 0) /* si multiple de 3 print Fizz */
-	{
-		printf("Fizz");
-	}
-	else if (i % 5 == 0) /* si multiple de 5 print Buzz */
-	{
-		printf("Buzz");
-	}
-	else
-	{
-		printf("%d", i);
-	}
-	if (i != 100) /* si inferieur a 100 print un espace */
-	{
-		printf(" ");
+		if (i % 3 == 0 && i % 5 != 0)
+		{
+			printf("Fizz");
+		}
+		else if (i % 5 == 0 && i % 3 != 0)
+		{
+			printf("Buzz");
+		}
+		else if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (i == 1)
+		{
+			printf("%d", i);
+		}
+		else
+		{
+			printf("%d", i);
+		}
 	}
 	printf("\n");
 	return (0);
