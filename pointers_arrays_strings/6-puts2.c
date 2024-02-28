@@ -16,8 +16,8 @@ void puts2(char *str)
 		if (i % 2 == 0) /* verifie si indice est paire */
 		{
 			_putchar(str[i]);/* print les indice paire */
-			i++;
 		}
-		_putchar('\n');
+		i++; /* incremente meme indice impaire */
 	}
+	_putchar('\n');
 }
