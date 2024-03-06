@@ -1,28 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * leet - function that encodes a string into 1337
- * @src: string
+ * main - check the code
  *
- * Return: src
+ * Return: Always 0.
  */
-
-char *leet(char *src)
+int main(void)
 {
-
-	int a[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int b[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
-
-	int i, j;
-
-	for (j = 0; src[j] != '\0'; j++)
-	{
-		for (i = 0; a[i] != '\0'; i++)
-		{
-			if (src[j] == a[i])
-				src[j] = b[i];
-		}
-	}
-
-	return (src);
+    char board[8][8] = {
+        {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+        {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+        {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+    };
+    print_chessboard(board);
+    return (0);
 }
