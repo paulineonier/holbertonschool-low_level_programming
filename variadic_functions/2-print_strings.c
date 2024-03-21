@@ -3,32 +3,33 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - print varying amount of strings
+ * print_strings - print strings
  * @separator: delimiter
- * @n: amount of arguments in list
+ * @n: number of arguments in list
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list valist;
-	unsigned int i;
-	char *s;
+	/* declaration de la liste d'argument variable */
+	unsigned int i; /* declaration de l'indice pour la boucle */
+	char *s; /* decla d'un pointeur de string */
 
-	if (n > 0)
+	if (n > 0) /* verifie si il y a au moins un argument */
 	{
-		va_start(valist, n);
-		for (i = 1; i <= n; i++)
+		va_start(valist, n); /* initialise la liste d'arguments variables */
+		for (i = 1; i <= n; i++) /* boucle a travers chaque argument */
 		{
-			s = va_arg(valist, char *);
-			if (s == NULL)
-				printf("(nil)");
+			s = va_arg(valist, char *); /* recupere argument de type char */
+			if (s == NULL) /* verifie si chaine est NULL */
+				printf("(nil)"); /* affiche nil si chaine NULL */
 			else
-				printf("%s", s);
+				printf("%s", s); /* affiche chaine de caracteres */
 
-			if (i != n && separator != NULL)
-				printf("%s", separator);
+			if (i != n && separator != NULL) /* verifie si ajout de separateur */
+				printf("%s", separator); /* ajoute separateur */
 		}
-		va_end(valist);
+		va_end(valist); /* termine utilisation de la liste d'arg */
 	}
 	printf("\n");
 }
